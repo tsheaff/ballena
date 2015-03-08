@@ -1,4 +1,4 @@
-# Grip
+# grip
 
 An awesome little [Ghost](https://ghost.org/) theme, as featured on [tsheaff.com](http://tsheaff.com/)
 
