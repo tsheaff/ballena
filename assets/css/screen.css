@@ -176,7 +176,7 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: "Lato", serif;
+    font-family: "Lato", sans-serif;
     letter-spacing: 0.01rem;
     font-size: 1.8rem;
     line-height: 1.75em;
@@ -470,9 +470,32 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
     z-index: 10;
     min-height: 100%;
-    background: #fff;
-    -webkit-transition: -webkit-transform 0.5s ease;
-            transition: transform 0.5s ease;
+}
+
+.site-wrapper .gradient-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.site-wrapper .gradient-bg.static {
+    background-image: linear-gradient(0deg, #020122, #07008A);
+}
+
+.site-wrapper .gradient-bg.animating {
+    background-image: linear-gradient(-90deg, #25023B, #5D008F);
+
+    -webkit-animation: gradient_fade 12s linear 0s infinite alternate;
+    animation: gradient_fade 12s linear 0s infinite alternate;
+}
+
+@keyframes gradient_fade {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@-webkit-keyframes gradient_fade {
+    from {opacity: 1;}
+    to {opacity: 0;}
 }
 
 body.nav-opened .site-wrapper {
@@ -820,12 +843,13 @@ body.nav-opened .menu-button .word {
 
 /* The details of your blog. Defined in ghost/settings/ */
 .page-title {
-    margin: 10px 0 10px 0;
-    font-size: 4.8rem;
+    margin: 10px 0 30px 0;
+    font-size: 7.0rem;
+    letter-spacing: 0.3rem;
     font-weight: 700;
-    text-shadow: 2px 2px 0px #000;
+    text-shadow: 1px 1px 0px #363636, 2px 2px 0px rgba(200,200,200,0.15);
     text-decoration: none;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Lobster Two", sans-serif;
     color: #fff;
 }
 
@@ -833,11 +857,11 @@ body.nav-opened .menu-button .word {
     margin: 0;
     font-size: 1.6rem;
     line-height: 1.4em;
+    letter-spacing: 0.1rem;
     font-weight: 400;
-    font-family: "Lato", serif;
-    text-shadow: 1px 1px 2px #000;
-    letter-spacing: 0.01rem;
-    color: #EEE;
+    font-family: "Lato", sans-serif;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    color: #ddd;
 }
 
 .no-cover.main-header {
@@ -859,33 +883,92 @@ body.nav-opened .menu-button .word {
     border-color: rgba(0,0,0,0.3);
 }
 
-/* Add subtle load-in animation for content on the home page */
-.home-template .page-title {
-    -webkit-animation: fade-in-down 0.6s;
-    animation: fade-in-down 0.6s;
-    -webkit-animation-delay: 0.2s;
-    animation-delay: 0.2s;
-}
-.home-template .page-description {
-    -webkit-animation: fade-in-down 0.9s;
-    animation: fade-in-down 0.9s;
-    -webkit-animation-delay: 0.1s;
-    animation-delay: 0.1s;
-}
-
 /* Every post, on every page, gets this style on its <article> tag */
-.post {
+.post.full-page {
     position: relative;
     width: 80%;
     max-width: 710px;
     margin: 4rem auto;
     padding-bottom: 4rem;
+    background: #fff;
+    border-radius: 4px;
+    padding: 30px 30px 18px 30px;
     border-bottom: #EBF2F6 1px solid;
     word-wrap: break-word;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+}
+
+.post.post-tile {
+    position: relative;
+    display: inline-block;
+    background: #ffffff;
+    border-radius: 4px;
+    width: 240px;
+    max-height: 560px;
+    margin: 20px 20px 20px 40px;
+    overflow: hidden;
+}
+
+.post.post-tile a {
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.post.post-tile img.post-image {
+    vertical-align: top;
+    width: auto;
+    height: 100%;
+}
+
+.post.post-tile .post-title {
+    font-family: 'Georgia', serif;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    padding: 12px 10px;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 18px;
+    color: #020023
+}
+
+.post.post-tile .byline {
+    display: table;
+    margin: auto;
+}
+
+.post.post-tile .byline .mark {
+    margin: 0px -8px;
+    position: relative;
+    top: -2px;
+    background-color: #1b673b;
+    opacity: 0.15;
+    height: 2px;
+    width: 28px;
+    display: inline-block;
+}
+
+.post.post-tile .byline .author {
+    font-family: 'Georgia', serif;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    padding: 12px 10px;
+    text-align: center;
+    line-height: 1.5em;
+    color: #1b673b
+}
+
+.post.post-tile .excerpt {
+    font-size: 14px;
+    line-height: 1.4em;
+    color: #000;
+    padding: 12px;
+    overflow: hidden;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
@@ -1032,13 +1115,6 @@ a .post-date:hover {
    imperfections with browser width % calculations and rounding */
 .post-template .content {
     overflow: hidden;
-}
-
-/* Tweak the .post wrapper style */
-.post-template .post {
-    margin-top: 0;
-    border-bottom: none;
-    padding-bottom: 0;
 }
 
 /* Kill that stylish little circle that was on the border, too */
@@ -1256,7 +1332,7 @@ a .post-date:hover {
 /* Location, website, and link */
 .author-profile .author-meta {
     margin: 2rem 0;
-    font-family: "Lato", serif;
+    font-family: "Lato", sans-serif;
     letter-spacing: 0.01rem;
     font-size: 1.7rem;
 }
@@ -1714,11 +1790,6 @@ a .post-date:hover {
         font-size: 2.5rem;
     }
 
-    .post-template .post {
-        padding-bottom: 0;
-        margin-bottom: 0;
-    }
-
     .post-template .site-footer {
         margin-top: 0;
     }
@@ -1810,40 +1881,4 @@ a .post-date:hover {
     }
 
 }
-
-
-/* ==========================================================================
-   12. Animations
-   ========================================================================== */
-
-/* Used to fade in title/desc on the home page */
-@-webkit-keyframes fade-in-down {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(-10px);
-        transform: translateY(-10px);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-@keyframes fade-in-down {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(-10px);
-        transform: translateY(-10px);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-
-/* ==========================================================================
-   End of file. Animations should be the last thing here. Do not add stuff
-   below this point, or it will probably fuck everything up.
-   ========================================================================== */
 
