@@ -994,7 +994,7 @@ body:not(.post-template) .post-title {
     white-space: nowrap;
 }
 
-.post-date:hover {
+a .post-date:hover {
     text-decoration: underline;
 }
 
