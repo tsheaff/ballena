@@ -994,6 +994,10 @@ body:not(.post-template) .post-title {
     white-space: nowrap;
 }
 
+.post-date:hover {
+    text-decoration: underline;
+}
+
 .user-image {
     position: absolute;
     top: 0;
