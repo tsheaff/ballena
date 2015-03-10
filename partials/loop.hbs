@@ -8,6 +8,9 @@
 <article class="{{post_class}}">
     <header class="post-header">
         <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+        <h2 class="post-title">
+            <a href="{{url}}" target="_self">{{{title}}}</a>
+        </h2>
     </header>
     <section class="post-excerpt">
         <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
@@ -16,7 +19,7 @@
         {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}
         {{author}}
         {{tags prefix=" on "}}
-        <a href="{{url}}">
+        <a href="{{url}}" target="_self">
             <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMM D, YYYY"}}</time>
         </a>
     </footer>

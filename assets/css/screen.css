@@ -1076,6 +1076,11 @@ a .post-date:hover {
     display: none;
 }
 
+.post-content a {
+    color:#009E25;
+    font-weight:700;
+}
+
 /* Keep images centred and within the bounds of the post-width */
 .post-content img {
     display: block;
