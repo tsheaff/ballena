@@ -2,7 +2,9 @@
 {{#foreach posts}}
 <article class="{{post_class}} post-tile">
     <a href="{{url}}" target="_self">
-        <!-- <img class="post-image" src="{{image}}"> -->
+        {{#if image}}
+        <div class="post-image" style="background-image: url({{image}})"></div>
+        {{/if}}
         <h2 class="post-title">{{title}}</h2>
         <div class="byline">
             <div class="mark mark-left"></div>
