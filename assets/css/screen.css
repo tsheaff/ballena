@@ -479,14 +479,14 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .site-wrapper .gradient-bg.static {
-    background-image: linear-gradient(0deg, #020122, #07008A);
+    background-image: linear-gradient(90deg, #15281C, #2E6042);
 }
 
 .site-wrapper .gradient-bg.animating {
     background-image: linear-gradient(-90deg, #02303B, #006D8F);
 
-    -webkit-animation: gradient_fade 8s linear 0s infinite alternate;
-    animation: gradient_fade 8s linear 0s infinite alternate;
+    -webkit-animation: gradient_fade 28s linear 0s infinite alternate;
+    animation: gradient_fade 28s linear 0s infinite alternate;
 }
 
 @keyframes gradient_fade {
