@@ -1,6 +1,6 @@
 # ballena
 
-An gently moving [Ghost](https://ghost.org/) theme, as featured on [tsheaff.com](http://tsheaff.com/)
+A gently moving [Ghost](https://ghost.org/) theme, as featured on [tsheaff.com](http://tsheaff.com/)
 
 ## Copyright & License
 
