@@ -1,10 +1,10 @@
-# grip
+# ballena
 
-An awesome little [Ghost](https://ghost.org/) theme, as featured on [tsheaff.com](http://tsheaff.com/)
+An gently moving [Ghost](https://ghost.org/) theme, as featured on [tsheaff.com](http://tsheaff.com/)
 
 ## Copyright & License
 
-Influenced by [Casper](https://github.com/TryGhost/Casper) but modified extensively by Tyler Sheaffer.
+Code influenced by [Casper](https://github.com/TryGhost/Casper) but modified extensively by Tyler Sheaffer.
 
 Copyright (c) 2013-2015 Ghost Foundation - Released under the MIT License.
 
