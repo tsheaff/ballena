@@ -1013,12 +1013,19 @@ body.nav-opened .menu-button .word {
     margin: auto;
 }
 
+.post.post-tile .byline .mark.mark-left {
+    margin: 0px 1px;
+}
+
+.post.post-tile .byline .mark.mark-right {
+    margin: 0px -2px;
+}
+
 .post.post-tile .byline .mark {
-    margin: 0px -8px;
     position: relative;
     top: -2px;
-    background-color: #1b673b;
-    opacity: 0.15;
+    background-color: #23432F;
+    opacity: 0.2;
     height: 2px;
     width: 28px;
     display: inline-block;
@@ -1026,13 +1033,15 @@ body.nav-opened .menu-button .word {
 
 .post.post-tile .byline .author {
     font-family: 'Georgia', serif;
+    font-style: italic;
     font-weight: 300;
     font-size: 10px;
+    opacity: 0.7;
     letter-spacing: 0.05em;
     padding: 12px 10px;
     text-align: center;
     line-height: 1.5em;
-    color: #1b673b
+    color: #23432F
 }
 
 .post.post-tile .excerpt {
