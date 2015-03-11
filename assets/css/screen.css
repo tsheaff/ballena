@@ -883,6 +883,17 @@ body.nav-opened .menu-button .word {
     border-color: rgba(0,0,0,0.3);
 }
 
+.main-header-content .post-title {
+    font-size: 7.0rem;
+    letter-spacing: 0.3rem;
+    font-weight: 900;
+    text-shadow: 1px 1px 0px #363636, 2px 2px 0px rgba(200,200,200,0.15);
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+}
+
+
 /* Every post, on every page, gets this style on its <article> tag */
 .post.full-page {
     position: relative;
@@ -1216,6 +1227,15 @@ a .post-date:hover {
 
 .post-footer .share a:hover {
     color: #50585D;
+}
+
+.post-head-shadow {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.8));
 }
 
 
