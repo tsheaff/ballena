@@ -920,8 +920,8 @@ body.nav-opened .menu-button .word {
     position: relative;
     display: inline-block;
     background: #ffffff;
-    width: 240px;
-    max-height: 360px;
+    width: 360px;
+    max-height: 420px;
     margin: 20px 20px 40px 20px;
     overflow: hidden;
     box-shadow: 0px 0px 20px rgba(0, 22, 42, 0.3);
@@ -1009,7 +1009,8 @@ body.nav-opened .menu-button .word {
     text-align: center;
     line-height: 1.5em;
     font-size: 18px;
-    color: #020023
+    color: #020023;
+    margin: 0 0 -12px 0;
 }
 
 .post.post-tile .byline {
