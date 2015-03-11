@@ -1546,11 +1546,10 @@ main.loop-content {
 
 .site-footer {
     position: relative;
-    margin: 8rem 0 0 0;
-    padding: 0.5rem 15px;
-    border-top: #EBF2F6 1px solid;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1rem;
+    margin: 6rem 0 0 0;
+    padding: 0.5rem 20px;
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
     line-height: 1.75em;
     color: #BBC7CC;
 }
@@ -1562,17 +1561,17 @@ main.loop-content {
 }
 
 .site-footer a:hover {
-    color: #50585D;
+    color: #000754;
 }
 
-.poweredby {
+.site-footer .poweredby {
     display: block;
     width: 45%;
     float: right;
     text-align: right;
 }
 
-.copyright {
+.site-footer .theme {
     display: block;
     width: 45%;
     float: left;
