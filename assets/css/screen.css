@@ -921,7 +921,7 @@ body.nav-opened .menu-button .word {
     display: inline-block;
     background: #ffffff;
     width: 240px;
-    max-height: 560px;
+    max-height: 360px;
     margin: 20px 20px 40px 20px;
     overflow: hidden;
 }
