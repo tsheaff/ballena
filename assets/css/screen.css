@@ -1073,6 +1073,7 @@ body:not(.post-template) .post-title {
 .post-meta {
     display: block;
     margin: 1.75rem 0 0 0;
+    padding-bottom: 10px;
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
@@ -1203,9 +1204,9 @@ a .post-date:hover {
 /* Break out larger images to be wider than the main text column
    the class is applied with jQuery */
 .post-content .full-img {
-    width: 126%;
+    width: 120%;
     max-width: none;
-    margin: 0 -13%;
+    margin: 0 -10%;
 }
 
 /* The author credit area after the post */
