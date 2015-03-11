@@ -924,6 +924,7 @@ body.nav-opened .menu-button .word {
     max-height: 360px;
     margin: 20px 20px 40px 20px;
     overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 22, 42, 0.3);
 }
 
 .post.post-tile a {
