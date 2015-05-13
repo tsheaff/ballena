@@ -96,11 +96,11 @@ var centerContent = function() {
 		return $(post).position().left;
 	}));
 
-	console.log('  maxLeft is ', maxLeft);
-
-    $('main.loop-content').css('left', function() {
-    	var maxRight = maxLeft + $posts.width();
-    	return 0.5 * ($(window).width() - maxRight);
+	var maxRight = maxLeft + $posts.width();
+	var left = 0.5 * ($(window).width() - maxRight);
+    $('main.loop-content').css({
+    	left: left,
+    	opacity: 1
     });
 };
 centerContent();
