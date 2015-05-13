@@ -137,9 +137,11 @@ table { border-collapse: collapse; border-spacing: 0; }
 .icon-feed:before {
     content: "\f601";
 }
+.icon-social:before {
+    font-size: 3.0em;
+}
 .icon-twitter:before {
     content: "\f602";
-    font-size: 1.1em;
 }
 .icon-google-plus:before {
     content: "\f603";
@@ -159,6 +161,36 @@ table { border-collapse: collapse; border-spacing: 0; }
 }
 .icon-link:before {
     content: "\f608";
+}
+
+.icon-social:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.icon-twitter:before {
+    color: rgba(45, 145, 181, 0.4);
+}
+.icon-facebook:before {
+    color: rgba(84, 106, 153, 0.4);
+}
+.icon-google-plus:before {
+    color: rgba(209, 92, 84, 0.4);
+}
+
+.icon-social:hover:before {
+    color: rgba(255, 255, 255, 1.0);
+}
+.icon-social {
+    margin: 0px 30px 0 0;
+}
+.icon-social.icon-twitter {
+    margin: 0px 25px 0 0;
+}
+
+.social-share-container {
+    display: inline-block;
+    text-align: center;
+    height: 100%;
 }
 
 
@@ -903,7 +935,7 @@ body.nav-opened .menu-button .word {
     position: relative;
     width: 80%;
     max-width: 710px;
-    margin: 4rem auto;
+    margin: 10px auto;
     padding-bottom: 4rem;
     background: #fff;
     border-radius: 4px;
@@ -1214,25 +1246,6 @@ a .post-date:hover {
     margin: 0 -10%;
 }
 
-/* The author credit area after the post */
-.post-footer {
-    position: relative;
-    margin: 6rem 0 0 0;
-    padding: 6rem 0 0 0;
-    border-top: #EBF2F6 1px solid;
-}
-
-.post-footer h4 {
-    font-size: 1.8rem;
-    margin: 0;
-}
-
-.post-footer p {
-    margin: 1rem 0;
-    font-size: 1.4rem;
-    line-height: 1.75em;
-}
-
 /* list of author links - location / url */
 .author-profile .author-meta {
     padding: 0;
@@ -1252,41 +1265,17 @@ a .post-date:hover {
     color: #111;
 }
 
-/* Create some space to the right for the share links */
-.post-footer .author {
-    margin-right: 180px;
-}
-
-.post-footer h4 a {
-    color: #2e2e2e;
-    text-decoration: none;
-}
-
-.post-footer h4 a:hover {
-    text-decoration: underline;
-}
-
-/* Drop the share links in the space to the right.
-   Doing it like this means it's easier for the author bio
-   to be flexible at smaller screen sizes while the share
-   links remain at a fixed width the whole time */
 .post-footer .share {
-    position: absolute;
-    top: 6rem;
-    right: 0;
-    width: 140px;
+    float: right;
+    position: relative;
+    right: -20px;
+    top: 44px;
 }
-
 .post-footer .share a {
     font-size: 1.8rem;
     display: inline-block;
-    margin: 1rem 1.6rem 1.6rem 0;
-    color: #BBC7CC;
+    color: #b8c9cc;
     text-decoration: none;
-}
-
-.post-footer .share a:hover {
-    color: #50585D;
 }
 
 .post-head-shadow, .tag-head-shadow, .author-head-shadow {
@@ -1337,23 +1326,42 @@ a .post-date:hover {
     text-align: center;
 }
 
+.footer-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.post-footer {
+    margin: 0 auto;
+    max-width: 770px;
+    width: 80%;
+}
+
+.post-footer .author-meta {
+    font-family: "Lato", sans-serif;
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    padding-left: 30px;
+}
+
 .author-image {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     display: block;
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    margin-left: -40px;
-    width: 80px;
-    height: 80px;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
+    border: 4px solid #fff;
     overflow: hidden;
-    padding: 6px;
-    background: #fff;
     z-index: 2;
-    box-shadow: #E7EEF2 0 0 0 1px;
+}
+
+.author-image {
 }
 
 .author-image .img {
@@ -1366,14 +1374,25 @@ a .post-date:hover {
     border-radius: 100%;
 }
 
+.post-footer .author-image {
+    display: inline-block;
+}
+
 .author-profile .author-image {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     position: relative;
     left: auto;
     top: auto;
+    border-radius: 100%;
+    overflow: hidden;
+    background: #fff;
     width: 120px;
     height: 120px;
     padding: 3px;
     margin: -100px auto 0 auto;
+    z-index: 2;
     box-shadow: none;
 }
 
@@ -1880,26 +1899,6 @@ main.loop-content {
     .post-meta {
         font-size: 1.3rem;
         margin-top: 1rem;
-    }
-
-    .post-footer {
-        padding: 5rem 0 3rem 0;
-        text-align: center;
-    }
-
-    .post-footer .author {
-        margin: 0 0 2rem 0;
-        padding: 0 0 1.6rem 0;
-        border-bottom: #EBF2F6 1px dashed;
-    }
-
-    .post-footer .share {
-        position: static;
-        width: auto;
-    }
-
-    .post-footer .share a {
-        margin: 1.4rem 0.8rem 0 0.8rem;
     }
 
     .author-meta li {
