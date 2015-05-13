@@ -98,11 +98,19 @@ var centerContent = function() {
 
 	var maxRight = maxLeft + $posts.width();
 	var left = 0.5 * ($(window).width() - maxRight);
-    $('main.loop-content').css({
-    	left: left,
-    	opacity: 1
-    });
+    $('main.loop-content').css('left', left);
 };
-centerContent();
-$(window).resize(centerContent);
-$(document).ready(centerContent);
+
+$(document).ready(function() {
+	centerContent();
+	$(window).resize(centerContent);
+
+	$('.post').each(function(i) {
+		$(this).css({
+			top: '30px'
+		}).delay(200 * i).animate({
+			opacity: 1,
+			top: 0
+		}, 400);
+	});
+});
