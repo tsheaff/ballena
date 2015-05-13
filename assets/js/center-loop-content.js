@@ -105,7 +105,7 @@ $(document).ready(function() {
 	centerContent();
 	$(window).resize(centerContent);
 
-	$('.post').each(function(i) {
+	$('.post.loop-post').each(function(i) {
 		$(this).css({
 			top: '30px'
 		}).delay(200 * i).animate({

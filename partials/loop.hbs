@@ -1,6 +1,6 @@
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
-<article class="{{post_class}} post-tile">
+<article class="{{post_class}} loop-post post-tile">
     <a href="{{url}}" target="_self">
         {{#if image}}
         <div class="post-image" style="background-image: url({{image}})"></div>
