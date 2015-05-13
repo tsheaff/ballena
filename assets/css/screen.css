@@ -1725,6 +1725,39 @@ main.loop-content {
         height: 40%;
     }
 
+    .post.loop-post {
+        max-width: calc(100vw - 30px);
+        left: -35px;
+    }
+
+    .share {
+        display: none;
+    }
+
+    .post-footer {
+        text-align: center;
+    }
+
+    .author-image {
+        margin-bottom: 30px;
+    }
+
+    .site-footer {
+        text-align: center;
+    }
+
+    .site-footer .poweredby {
+        display: none;
+    }
+
+    .main-header-content .page-title, .author-title {
+        font-size: 5.0rem;
+    }
+
+    .site-footer .theme {
+        width: 100%;
+    }
+
     .main-header-content .post-title {
         font-size: 2.5em !important;
     }
